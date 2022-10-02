@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+</head>
+<body>
+    <h1>Prininting your name in Lower, Upper and in tile case.</h1>
+    <input type="text" placeholder="Pleade Enter your name." onchange="gettingName(event)">
+    <button type="submit">Submit Your name</button>
+    <p id="nameId"></p>
+    <script>
+        let name = ' ';
+       
+        function gettingName($event) {
+            name = event.target.value;
+            if(name == '') {
+                name = 'Someone'
+            }
+            let upperCase  = `Upper Case is "${name.toUpperCase()}" Lower Case is "${name.toLowerCase()}"" Tile Case is "${name[0].toUpperCase()+name.substring(1)}"`;
+            document.getElementById('nameId').innerHTML = upperCase;
+        }
+    </script>
+</body>
+</html>
