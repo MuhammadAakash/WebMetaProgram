@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+</head>
+<body>
+    <h1>Prininting your name with a Message.</h1>
+    <input type="text" placeholder="Pleade Enter your name." onchange="gettingName(event)">
+    <button type="submit">Submit Your name</button>
+    <h5 id="nameId"></h5>
+    <script>
+        let name = ' ';
+       
+        function gettingName($event) {
+            console.log(event.target.value);
+            name = event.target.value;
+            if(name == '') {
+                name = 'Someone'
+            }
+            let message = `Hi ${name}, would you like to learn some JavaScript today?`;
+            document.getElementById('nameId').innerHTML = message;
+            console.log(message);    
+        }
+    </script>
+</body>
+</html>
